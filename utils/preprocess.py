@@ -13,7 +13,7 @@ def load_and_clean_data(filepath):
         'ladderRatio': df['ladderRatio'].mean()
     }, inplace=True)
 
-    # ✅ 强制转换为数值类型
+    #  强制转换为数值类型
     cols_to_convert = ['livingRoom', 'drawingRoom', 'bathRoom', 'constructionTime']
     for col in cols_to_convert:
         df[col] = pd.to_numeric(df[col], errors='coerce')
